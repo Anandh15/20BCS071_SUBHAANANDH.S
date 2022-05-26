@@ -1,0 +1,43 @@
+Int flag=0;
+
+Int t1=0;
+
+Int t2=0;
+
+Void setup()
+
+{
+Serial.begin({9600);
+
+pinMode(2,OUTPUT);
+
+}
+Void loop()
+
+{
+Int x=analogRead({A0O);
+
+//Serial.printin(x);
+
+If(x<400 && flag==0)
+
+Flag=1;
+T1=millis();
+}
+Else if(x>400 && flag==1)
+{
+Flag=0;
+T2=millis();
+Serial.printIn(t2-t1);
+If((t2-t1)>1000)
+{
+
+digitalWrite(2,HIGH);
+
+Delay(2000);
+digitalWrite(2,LOW);
+
+}
+
+Else;
+
